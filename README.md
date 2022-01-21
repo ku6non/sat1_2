@@ -38,65 +38,42 @@ urlは[link](git@github.com:ku6non/sat1_2.git)です。
 `docker exec -it mysql mysql techc`
 
 `MariaDB[techc]>>CREATE TABLE 'koki02_users' (
-                'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-		'name' TEXT NOT NULL,
-		'email' TEXT NOT NULL,
-    	 	'password' TEXT NOT NULL,
+                id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		name' TEXT NOT NULL,
+		email' TEXT NOT NULL,
+    	 	password' TEXT NOT NULL,
+    		created_at' DATETIME DEFAULT CURRENT_TIMESTAMP
+		);`
+		
+		
+`MariaDB[techc]>>CREATE TABLE 'users' (
+    		'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   		'name' TEXT NOT NULL,
+    		'email' TEXT NOT NULL,
+    		'password' TEXT NOT NULL,
+    		'created_at' DATETIME DEFAULT CURRENT_TIMESTAMP,
+    		'icon_filename' TEXT DEFAULT NULL,
+    		'cover_filename' TEXT DEFAULT NULL,
+    		'birthday' DATE DEFAULT NULL,
+    		'introduction' TEXT DEFAULT NULL
+		);`
+		
+		
+`MariaDB[techc]>>CREATE TABLE 'bbs_entries' (
+    		'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    		'user_id' INT UNSIGNED NOT NULL,
+    		'body' TEXT NOT NULL,
+    		'image_filename' TEXT DEFAULT NULL,
     		'created_at' DATETIME DEFAULT CURRENT_TIMESTAMP
 		);`
 		
 		
-`MariaDB[techc]>>CREATE TABLE 'users' (`
-
-    		`'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,`
-		
-   		`'name' TEXT NOT NULL,`
-		
-    		`'email' TEXT NOT NULL,`
-		
-    		`'password' TEXT NOT NULL,`
-		
-    		`'created_at' DATETIME DEFAULT CURRENT_TIMESTAMP,`
-		
-    		`'icon_filename' TEXT DEFAULT NULL,`
-		
-    		`'cover_filename' TEXT DEFAULT NULL,`
-		
-    		`'birthday' DATE DEFAULT NULL,`
-		
-    		`'introduction' TEXT DEFAULT NULL`
-		
-		`);`
-		
-		
-		
-`MariaDB[techc]>>CREATE TABLE 'bbs_entries' (`
-
-    		`'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,`
-		
-    		`'user_id' INT UNSIGNED NOT NULL,`
-		
-    		`'body' TEXT NOT NULL,`
-		
-    		`'image_filename' TEXT DEFAULT NULL,`
-		
-    		`'created_at' DATETIME DEFAULT CURRENT_TIMESTAMP`
-		
-		`);
-		
-		
-		
-`MariaDB[techc]>>CREATE TABLE 'user_relationships' (`
-
-    		`'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,`
-		
-    		`'followee_user_id' INT UNSIGNED NOT NULL,`
-		
-    		`'follower_user_id' INT UNSIGNED NOT NULL,`
-		
-    		`'created_at' DATETIME DEFAULT CURRENT_TIMESTAMP`
-		
-		`);`\
+`MariaDB[techc]>>CREATE TABLE 'user_relationships' (
+    		'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    		'followee_user_id' INT UNSIGNED NOT NULL,
+    		'follower_user_id' INT UNSIGNED NOT NULL,
+    		'created_at' DATETIME DEFAULT CURRENT_TIMESTAMP
+		);`
 		
 
 3.docker再構築
