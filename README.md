@@ -37,7 +37,8 @@ urlは[link](git@github.com:ku6non/sat1_2.git)です。
 
 `docker exec -it mysql mysql techc`
 
-`MariaDB[techc]>>CREATE TABLE 'koki02_users' (
+#MariaDB上操作
+`CREATE TABLE 'koki02_users' (
                 id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 		name' TEXT NOT NULL,
 		email' TEXT NOT NULL,
@@ -46,7 +47,7 @@ urlは[link](git@github.com:ku6non/sat1_2.git)です。
 		);`
 		
 		
-`MariaDB[techc]>>CREATE TABLE 'users' (
+`CREATE TABLE 'users' (
     		'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
    		'name' TEXT NOT NULL,
     		'email' TEXT NOT NULL,
@@ -59,7 +60,7 @@ urlは[link](git@github.com:ku6non/sat1_2.git)です。
 		);`
 		
 		
-`MariaDB[techc]>>CREATE TABLE 'bbs_entries' (
+`CREATE TABLE 'bbs_entries' (
     		'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     		'user_id' INT UNSIGNED NOT NULL,
     		'body' TEXT NOT NULL,
@@ -68,7 +69,7 @@ urlは[link](git@github.com:ku6non/sat1_2.git)です。
 		);`
 		
 		
-`MariaDB[techc]>>CREATE TABLE 'user_relationships' (
+`CREATE TABLE 'user_relationships' (
     		'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     		'followee_user_id' INT UNSIGNED NOT NULL,
     		'follower_user_id' INT UNSIGNED NOT NULL,
