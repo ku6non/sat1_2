@@ -14,9 +14,9 @@ urlは[link](git@github.com:ku6non/sat1_2.git)です。
 ・まず一度docker-composeをbuildし、起動する必要があるので
 以下のコマンドでbuild及びupしてください。
 
-`docker-compose build
+`docker-compose build`
 
-docker-compose up`
+`docker-compose up`
 
 ・次に以下のコマンドを実行してmysqlを起動し、
 4つのテーブルを作成してください。
