@@ -27,6 +27,7 @@ urlは[link](git@github.com:ku6non/sat1_2.git)です。
 以下のコマンドでbuild及びupしてください。
 
 `docker-compose build`
+
 `docker-compose up`
 
 
@@ -36,18 +37,13 @@ urlは[link](git@github.com:ku6non/sat1_2.git)です。
 
 `docker exec -it mysql mysql techc`
 
-`MariaDB[techc]>>CREATE TABLE 'koki02_users' (`
-                `'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,`
-		
-		`'name' TEXT NOT NULL,`
-		
-		`'email' TEXT NOT NULL,`
-		
-    	 	`'password' TEXT NOT NULL,`
-		
-    		`'created_at' DATETIME DEFAULT CURRENT_TIMESTAMP`
-		`);`
-		
+`MariaDB[techc]>>CREATE TABLE 'koki02_users' (
+                'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		'name' TEXT NOT NULL,
+		'email' TEXT NOT NULL,
+    	 	'password' TEXT NOT NULL,
+    		'created_at' DATETIME DEFAULT CURRENT_TIMESTAMP
+		);`
 		
 		
 `MariaDB[techc]>>CREATE TABLE 'users' (`
@@ -110,6 +106,7 @@ urlは[link](git@github.com:ku6non/sat1_2.git)です。
 以下のコマンドで再構築してください。
 
 `docker-compose build`
+
 `docker-compose up`
 
 
