@@ -1,0 +1,8 @@
+/* for PC */
+@media screen and (min-width:480px){ html}
+
+/* for iPad */
+@media screen and (min-width:768px) and (max-width:1024px){html}
+
+/* for PC */
+@media screen and (min-width:1024px){html}
