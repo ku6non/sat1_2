@@ -12,19 +12,28 @@
 
 
 構築手順
+
 1.ソースコードの設置
+
 githubより任意のファイル内にcloneしてください
+
 urlは[link](git@github.com:ku6non/sat1_2.git)です。
 
+
 2.dbの構築
+
 ・まず一度docker-composeをbuildし、起動する必要があるので
+
 以下のコマンドでbuild及びupしてください。
 
 `docker-compose build`
 `docker-compose up`
 
+
 ・次に以下のコマンドを実行してmysqlを起動し、
+
 4つのテーブルを作成してください。
+
 `docker exec -it mysql mysql techc`
 `MariaDB[techc]>>CREATE TABLE 'koki02_users' (`
                 `'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,`
@@ -61,12 +70,19 @@ urlは[link](git@github.com:ku6non/sat1_2.git)です。
     		`'created_at' DATETIME DEFAULT CURRENT_TIMESTAMP`		
 		`);`\
 3.docker再構築
+
 ・mysqlの変更を反映させるために一度ctrl+cでdocker-composeをstopさせて
+
 以下のコマンドで再構築してください。
+
 `docker-compose build`
 `docker-compose up`
 
 
+
 4.確認
+
 掲示板のページは/login.phpです。
+
 動作確認をお願いします。
+
