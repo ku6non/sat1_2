@@ -37,7 +37,7 @@ urlは[link](git@github.com:ku6non/sat1_2.git)です。
 
 `docker exec -it mysql mysql techc`
 
-#MariaDB上操作
+
 `CREATE TABLE 'koki02_users' (
                 id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 		name' TEXT NOT NULL,
