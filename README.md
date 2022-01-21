@@ -19,6 +19,8 @@ docker-compose up`
 ・次に以下のコマンドを実行してmysqlを起動し、
 4つのテーブルを作成してください。
 `docker exec -it mysql mysql techc`
+
+
 MariaDB[techc]>>CREATE TABLE 'koki02_users' (
 		'id' INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 		'name' TEXT NOT NULL,
