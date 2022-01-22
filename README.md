@@ -17,7 +17,7 @@
 
 githubより任意のファイル内にcloneしてください
 
-urlは[link](git@github.com:ku6non/sat1_2.git)です。
+`git clone git@github.com:ku6non/sat1_2.git`
 
 
 2.dbの構築
