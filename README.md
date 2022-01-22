@@ -15,7 +15,7 @@
 
 1.ソースコードの設置
 
-githubより任意のファイル内にcloneしてください
+githubより任意のディレクトリにcloneしてください
 
 `git clone git@github.com:ku6non/sat1_2.git`
 
